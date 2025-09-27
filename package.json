@@ -2,42 +2,53 @@
   "name": "spookychain-ai-agent",
   "version": "1.0.0-halloween",
   "description": "🎃 Halloween-themed AI Agent for MultiversX blockchain automation with ghostly features",
-  "main": "src/index.js",
+  "main": "game/halloween-hunt.js",
   "scripts": {
     "build-web3-future": "echo '🚀 Building the decentralized future with blockchain sorcery...' && npm run compile-contracts",
     "compile-contracts": "echo '🛠️  Compiling spooky smart contracts...' && echo 'MultiversX contracts ready for haunting!'",
     "summon-agent": "python3 src/ai_agent.py",
-    "start": "node src/index.js",
+    "start": "node game/halloween-hunt.js",
     "test": "echo 'Testing supernatural blockchain powers...'",
     "create-ai-agent": "echo 'yarn create-ai-agent --theme=halloween --blockchain=multiversx executed! 🎃'",
-    "ghost-mode": "echo 'Entering ghost mode... 👻' && npm run summon-agent",
-    "witching-hour": "echo 'Activating witching hour protocols... 🌙' && date",
-    "resurrection-ritual": "echo 'Preparing zombie contract resurrection... 🧟‍♂️'"
+    
+    "halloween-hunt": "node game/halloween-hunt.js",
+    "ghost-mode": "node scripts/spooky-commands.js ghost-mode",
+    "curse-scan": "node scripts/spooky-commands.js curse-scan", 
+    "summon-spirit": "node scripts/spooky-commands.js summon-spirit",
+    "midnight-trade": "node scripts/spooky-commands.js midnight-trade",
+    "ghost-stats": "node scripts/spooky-commands.js ghost-stats",
+    "curse-shield": "node scripts/spooky-commands.js curse-shield",
+    "phantom-wallet": "node scripts/spooky-commands.js phantom-wallet",
+    "blockchain-ouija": "node scripts/spooky-commands.js blockchain-ouija",
+    
+    "midnight-mode": "echo '🌙 Activating witching hour protocols...' && npm run midnight-trade",
+    "witching-hour": "echo 'Current time:' && date && npm run midnight-trade",
+    "resurrection-ritual": "echo 'Preparing zombie contract resurrection... 🧟‍♂️' && npm run summon-spirit",
+    "spooky-help": "echo '🎃 SPOOKY COMMANDS:' && echo 'npm run halloween-hunt - Start main game' && echo 'npm run ghost-mode - Enter stealth mode' && echo 'npm run curse-scan - Detect evil contracts' && echo 'npm run midnight-trade - Execute witching hour trades' && echo 'npm run blockchain-ouija - Communicate with spirits'"
   },
   "keywords": [
     "halloween",
     "ai-agent",
-    "blockchain",
+    "blockchain", 
     "multiversx",
     "smart-contracts",
     "automation",
     "spooky",
     "web3",
     "defi",
-    "ghost-trading"
+    "ghost-trading",
+    "interactive-game",
+    "cli-game"
   ],
   "author": {
-    "name": "George Pricop",
-    "email": "noreply@github.com",
-    "url": "https://github.com/Gzeu",
+    "name": "Digital Necromancer",
     "title": "Blockchain Developer & AI Automation Specialist",
-    "location": "București, Romania",
-    "github_birthday": "2021-12-24T01:19:20Z",
     "specialties": [
       "MultiversX Smart Contracts",
-      "AI Agent Development",
+      "AI Agent Development", 
       "Blockchain Necromancy",
-      "Digital Sorcery"
+      "Digital Sorcery",
+      "Interactive CLI Games"
     ]
   },
   "repository": {
@@ -46,6 +57,8 @@
   },
   "license": "MIT",
   "dependencies": {
+    "readline": "^1.3.0",
+    "crypto": "^1.0.1",
     "axios": "^1.5.0",
     "web3": "^4.0.0",
     "@multiversx/sdk-core": "^12.0.0",
@@ -66,6 +79,19 @@
     "ghost_mode": true,
     "curse_protection": true,
     "resurrection_enabled": true,
-    "witching_hour_optimization": true
+    "witching_hour_optimization": true,
+    "interactive_game": true,
+    "objectives": [
+      "Find Hidden Wallet",
+      "Summon 3 Ghost Trades", 
+      "Detect 5 Cursed Contracts",
+      "Resurrect Zombie Code",
+      "Unlock Crypto Crypt"
+    ],
+    "rewards": {
+      "novice_necromancer": "Complete 2 objectives",
+      "blockchain_witch": "Complete 4 objectives",
+      "digital_ghost_master": "Complete all 5 objectives"
+    }
   }
 }
